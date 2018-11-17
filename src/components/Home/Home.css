@@ -1,0 +1,13 @@
+.home__wrapper {
+    background-image: url("../../assets/images/jourdain-home.jpg");
+    background-size:cover;
+    background-position: center;
+    background-position-x: 25%;
+    height: 100vh;
+}
+
+.home__title {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}

@@ -1,0 +1,43 @@
+.link-container {
+    display: flex;
+    justify-content: center;
+    /* height: 10vh; */
+    background-color: #000;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.navbar-inverse {
+    position: fixed;
+    width: 100%;
+    background-color: #000;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+
+.navbar-inverse .navbar-toggle:hover {
+    background-color: #000;
+}
+
+.navbar-toggle {
+    border: none;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}
+
+.link-container__title {
+    color: #fff;
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 20px;
+    letter-spacing: 1px;
+}

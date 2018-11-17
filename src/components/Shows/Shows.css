@@ -1,0 +1,28 @@
+.shows__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+.shows__header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.shows__header span {
+    text-decoration: underline;
+}
+
+.shows__data-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.shows__dates, .shows__venue, .shows__city {
+    display: flex;
+    flex-direction: column;
+}

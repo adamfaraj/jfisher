@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
 
+import Navigation from './components/Navigation/Navigation';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Shows from './components/Shows/Shows';
-import Navigation from './components/Navigation/Navigation';
+import Videos from './components/Videos/Videos';
+import Photos from './components/Photos/Photos';
+import Contact from './components/Contact/Contact';
 
+import scrollToComponent from 'react-scroll-to-component';
 import './App.css';
 
 class App extends Component {
@@ -14,7 +18,10 @@ class App extends Component {
           <Navigation />
           <Home />
           <About />
-          <Shows />
+          <Shows ref={(section) => { this.Shows = section; }} />
+          <Videos className="scrollToHere"/>
+          <Photos />
+          <Contact />
         </div>
     );
   }

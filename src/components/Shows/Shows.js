@@ -5,6 +5,7 @@ import './Shows.css';
 class Shows extends React.Component {
     constructor(props) {
         super(props);
+        this.myRef = React.createRef();
 
         this.state = {
             shows: [],
@@ -20,6 +21,12 @@ class Shows extends React.Component {
             .then(data => this.setState({ shows: data.feed.entry }));
     };
 
+    scrollToMyRef = () => {
+        window.scrollTo({
+            top:this.myRef.current.offsetTop, 
+            behavior: "smooth"
+        })
+    }
 
     render() {
 
@@ -27,37 +34,40 @@ class Shows extends React.Component {
         console.log(shows);
 
         return (
-            <div className="shows__wrapper" id="shows">
+            <div className="shows__wrapper" id="shows" ref={this.myRef}>
                 <div className="shows__title">
                     <h1>Upcoming Shows</h1>
                 </div>
-                <div className="shows__header">
-                    <span>Date</span>
-                    <span>Venue</span>
-                    <span>City</span>
-                </div>
-                <div className="shows__data-wrapper">
-                    <div className="shows__dates">
-                        {shows.map(item => (
-                            <span key={item.id.$t}>
-                                {item.gsx$date.$t}
-                            </span>
-                        ))}
+                <div className="shows__details">
+                    <div className="shows__header">
+                        <span>Date</span>
+                        <span>Venue</span>
+                        <span>City</span>
                     </div>
-                    <div className="shows__venue">
-                        {shows.map(item => (
-                            <span key={item.id.$t}>
-                                {item.gsx$venue.$t}
-                            </span>
-                        ))}
+                    <div className="shows__data-wrapper">
+                        <div className="shows__dates">
+                            {shows.map(item => (
+                                <span key={item.id.$t}>
+                                    {item.gsx$date.$t}
+                                </span>
+                            ))}
+                        </div>
+                        <div className="shows__venue">
+                            {shows.map(item => (
+                                <span key={item.id.$t}>
+                                    {item.gsx$venue.$t}
+                                </span>
+                            ))}
+                        </div>
+                        <div className="shows__city">
+                            {shows.map(item => (
+                                <span key={item.id.$t}>
+                                    {item.gsx$city.$t}
+                                </span>
+                            ))}
+                        </div>
                     </div>
-                    <div className="shows__city">
-                        {shows.map(item => (
-                            <span key={item.id.$t}>
-                                {item.gsx$city.$t}
-                            </span>
-                        ))}
-                    </div>
+
 
                 </div>
             </div>

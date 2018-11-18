@@ -1,0 +1,28 @@
+.videos__wrapper {
+    background-image: url('../../assets/images/videos-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 140px 40px;
+    color: white;
+}
+.videos__title {
+    display: flex;
+    justify-content: center;
+}
+
+.videos__video {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+iframe {
+    border: none;
+}
+
+@media (min-width: 768px) {
+    iframe {
+        width: 450px;
+        height: 225px;
+    }
+}

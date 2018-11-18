@@ -1,0 +1,21 @@
+.photo__wrapper {
+    padding: 40px;
+    background-color: #000;
+    color: white;
+}
+
+.photo__title {
+    display: flex;
+    justify-content: center;
+}
+
+.photo__item {
+    display: flex;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    img {
+        max-width: 440px;
+    }
+}

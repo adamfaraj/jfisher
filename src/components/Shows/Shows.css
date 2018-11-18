@@ -3,10 +3,18 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 40px;
+    padding: 140px 40px;
+    background-image: url('../../assets/images/shows-bg.jpg');
+    background-position: center;
+    background-size: cover;
+    color: #fff;
 }
 
-.shows__header {
+.shows__details {
+    width: 100%;
+}
+
+.shows__header, .shows__data-wrapper {
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -16,13 +24,22 @@
     text-decoration: underline;
 }
 
-.shows__data-wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
 .shows__dates, .shows__venue, .shows__city {
     display: flex;
     flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .shows__details {
+        width: 80%;
+    }
+
+    .shows__header, .shows__data-wrapper {
+        display: grid;
+        grid-template-columns: 15% 31% 16%;
+    }
+
+    span {
+        font-size: 40px;
+    }
 }

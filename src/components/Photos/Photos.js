@@ -26,7 +26,7 @@ class Photos extends React.Component {
                     Photos
                 </h1>
                 <div className="photo__item">
-                    <Carousel showThumbs={false} dynamicHeight={true} infiniteLoop={true} autoPlay={true} width="auto">
+                    <Carousel showThumbs={false} dynamicHeight={true} infiniteLoop={true} autoPlay={true}>
                         <div>
                             <img src={jf1}/>
                         </div>

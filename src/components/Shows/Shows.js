@@ -31,7 +31,6 @@ class Shows extends React.Component {
     render() {
 
         const { shows } = this.state;
-        console.log(shows);
 
         return (
             <div className="shows__wrapper" id="shows" ref={this.myRef}>

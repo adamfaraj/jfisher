@@ -8,7 +8,6 @@ import Videos from './components/Videos/Videos';
 import Photos from './components/Photos/Photos';
 import Contact from './components/Contact/Contact';
 
-import scrollToComponent from 'react-scroll-to-component';
 import './App.css';
 
 class App extends Component {
@@ -18,8 +17,8 @@ class App extends Component {
           <Navigation />
           <Home />
           <About />
-          <Shows ref={(section) => { this.Shows = section; }} />
-          <Videos className="scrollToHere"/>
+          <Shows />
+          <Videos />
           <Photos />
           <Contact />
         </div>

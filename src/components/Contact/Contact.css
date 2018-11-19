@@ -11,3 +11,64 @@
     flex-direction: column;
     padding: 20px;
 }
+
+h3, h4 {
+    margin: 5px 0 0;
+}
+
+.social-media__container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fab {
+    font-family: "Font Awesome 5 Brands";
+    font-size: 22px;
+    border: 2px solid black;
+    padding: 10px 14px;
+    border-radius: 25%;
+}
+
+.facebook {
+    background-color: #4267b2;
+    overflow: hidden;
+    color: white;
+    border-radius: 25%;
+}
+
+.facebook:hover {
+    color: white;
+}
+
+.fa-instagram {
+    color: #000;
+}
+
+.social__mobile {
+    display: none;
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .social__mobile {
+        display: block;
+    }
+
+    .social__desktop {
+        display: none;
+    }
+    
+}
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+  }

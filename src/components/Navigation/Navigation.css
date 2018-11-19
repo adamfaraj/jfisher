@@ -5,6 +5,11 @@
     background-color: #000;
 }
 
+button {
+    background: none;
+    border: none;
+}
+
 .navbar {
     margin-bottom: 0;
 }

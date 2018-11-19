@@ -18,7 +18,7 @@ class Videos extends React.Component {
                     Videos
                 </h1>
                 <div className="videos__video">
-                <iframe width="auto" height="auto" src="https://www.youtube.com/embed/cefXlJrz7c4" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                <iframe title="Jourdain Fisher 2017 Finalist StandUp NBC" width="auto" height="auto" src="https://www.youtube.com/embed/cefXlJrz7c4" allowFullScreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
                 </div>
             </div>
         )

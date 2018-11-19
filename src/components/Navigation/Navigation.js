@@ -4,10 +4,6 @@ import { Navbar, Nav, NavItem } from 'react-bootstrap';
 import './Navigation.css';
 
 class Navigation extends React.Component {
-        constructor(props) {
-            super(props);
-        }
-
     toHome = (e) => {
         e.preventDefault();
         window.scrollTo({
@@ -43,7 +39,7 @@ class Navigation extends React.Component {
             <Navbar inverse collapseOnSelect>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <a href="" onClick={this.toHome}>Jourdain Fisher</a>
+                        <button href="" onClick={this.toHome}>Jourdain Fisher</button>
                     </Navbar.Brand>
                     <Navbar.Toggle />
                 </Navbar.Header>

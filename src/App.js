@@ -11,6 +11,11 @@ import Contact from './components/Contact/Contact';
 import './App.css';
 
 class App extends Component {
+  componentDidMount() {
+    console.log("Created by Adam Faraj");
+    console.log("Why are you looking at the console?");
+  }
+
   render() {
     return (
         <div>

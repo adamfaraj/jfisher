@@ -11,13 +11,6 @@ import jf4 from '../../assets/images/jf-4.jpg';
 import './Photos.css';
 
 class Photos extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-
-        }
-    }
 
     render() {
         return (
@@ -28,16 +21,16 @@ class Photos extends React.Component {
                 <div className="photo__item">
                     <Carousel showThumbs={false} dynamicHeight={true} infiniteLoop={true} autoPlay={true}>
                         <div>
-                            <img src={jf1}/>
+                            <img src={jf1} alt="Jourdain Fisher"/>
                         </div>
                         <div>
-                            <img src={jf2}/>
+                            <img src={jf2} alt="Jourdain Fisher"/>
                         </div>
                         <div>
-                            <img src={jf3}/>
+                            <img src={jf3} alt="Jourdain Fisher"/>
                         </div>
                         <div>
-                            <img src={jf4}/>
+                            <img src={jf4} alt="Jourdain Fisher"/>
                         </div>
                     </Carousel>
                 </div>

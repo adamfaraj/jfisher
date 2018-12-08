@@ -25,7 +25,7 @@ p {
     line-height: 1.66em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
     .about__wrapper {
         flex-direction: row;
         padding: 100px 240px;
@@ -39,3 +39,15 @@ p {
         font-size: 65px;
     }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+    .about__wrapper {
+        padding: 100px 50px;
+    }
+
+    .about__text {
+        padding: 5%;
+    }
+    
+  }

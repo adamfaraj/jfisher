@@ -41,7 +41,7 @@ class Shows extends React.Component {
                     <div className="shows__header">
                         <span>Date</span>
                         <span>Venue</span>
-                        <span>City</span>
+                        <span className="shows__city-header">City</span>
                     </div>
                     <div className="shows__data-wrapper">
                         <div className="shows__dates">

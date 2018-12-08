@@ -13,12 +13,19 @@ class Videos extends React.Component {
 
     render() {
         return (
-            <div className="videos__wrapper" id="videos">
-                <h1 className="videos__title">
-                    Videos
+            <div>
+                <div className="videos__wrapper" id="videos">
+                    <h1 className="videos__title">
+                        Videos
                 </h1>
-                <div className="videos__video">
-                <iframe title="Jourdain Fisher 2017 Finalist StandUp NBC" width="auto" height="auto" src="https://www.youtube.com/embed/cefXlJrz7c4" allowFullScreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    <div className="videos__video">
+                        <iframe title="Jourdain Fisher Standup on Jimmy Fallon" width="100%" height="100%" src="https://www.youtube.com/embed/Anm8cU7ZR8g" allowFullScreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    </div>
+                </div>
+                <div className="videos__wrapper" id="videos">
+                    <div className="videos__video">
+                        <iframe title="Jourdain Fisher 2017 Finalist StandUp NBC" width="100%" height="100%" src="https://www.youtube.com/embed/cefXlJrz7c4" allowFullScreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    </div>
                 </div>
             </div>
         )

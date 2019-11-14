@@ -20,10 +20,6 @@ class Contact extends React.Component {
                     </h1>
                 </div>
                 <div className="contact__info">
-                    <h3>Manager: David Kimowitz</h3>
-                    <h4>CHEntertainment</h4>
-                    <p><a href="mailto:David@chentertainment.com?cc=jourdainfisher@gmail.com" target="_blank" rel="noopener noreferrer">David@chentertainment.com</a></p>
-                    
                     <h3>Film/TV Agent: Kent Ochse</h3>
                     <h4>Gersh</h4>
                     <p><a href="mailto:Kochse@gersh.com?cc=jourdainfisher@gmail.com" target="_blank" rel="noopener noreferrer">Kochse@gersh.com</a></p>

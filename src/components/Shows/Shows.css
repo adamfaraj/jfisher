@@ -3,9 +3,9 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 40px 40px;
+    padding: 40px;
     background-image: url('../../assets/images/show-bg.png');
-    background-position: center;
+    /* background-position: center; */
     background-size: cover;
     color: #fff;
 }
@@ -36,7 +36,7 @@
 @media (min-width: 768px) {
     .shows__wrapper {
         padding: 150px 40px;
-        background-position: right;
+        /* background-position: right; */
     }
     .shows__details {
         width: 80%;

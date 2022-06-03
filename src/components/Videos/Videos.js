@@ -2,16 +2,7 @@ import React from 'react';
 
 import './Videos.css';
 
-class Videos extends React.Component {
-    constructor(props) {
-        super(props);
-
-        this.state = {
-
-        }
-    }
-
-    render() {
+export default function Videos() {
         return (
             <div>
                 <div className="videos__wrapper" id="videos">
@@ -32,6 +23,3 @@ class Videos extends React.Component {
             </div>
         )
     }
-}
-
-export default Videos;

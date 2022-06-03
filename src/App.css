@@ -1,3 +1,6 @@
 body {
+  background-color: black;
   font-family: 'Roboto Condensed', sans-serif;
+  max-width: 1100px;
+  margin: 0 auto;
 }

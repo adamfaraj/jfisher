@@ -2,13 +2,9 @@ import React from 'react';
 
 import './Home.css';
 
-class Home extends React.Component {
-    render() {
+export default function Home() {
         return (
             <div className="home__wrapper" id="home">
             </div>
         )
     }
-}
-
-export default Home;

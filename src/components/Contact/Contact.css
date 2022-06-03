@@ -1,4 +1,5 @@
 .contact__wrapper {
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -7,9 +8,15 @@
 }
 
 .contact__info {
-    display: flex;
-    flex-direction: column;
     padding: 20px;
+}
+
+.contact__info div {
+    margin-bottom: 2rem;
+}
+.contact__info p {
+    line-height: 1.3em;
+    margin-bottom: 0;
 }
 
 h3, h4 {
@@ -19,6 +26,29 @@ h3, h4 {
 .social-media__container {
     display: flex;
     justify-content: space-evenly;
+    margin-top: 3rem;
+}
+
+.social-media__container a {
+    height: 50px;
+    width: 50px;
+}
+.social-media__container em {
+    display: none;
+}
+
+.logos {
+    background-size: contain;
+}
+
+.facebook {
+    background-image: url('../../assets/logos/facebook.png');
+}
+.instagram {
+    background-image: url('../../assets/logos/ig.png');
+}
+.twitter {
+    background-image: url('../../assets/logos/twitter.png');
 }
 
 .fab {
@@ -30,10 +60,10 @@ h3, h4 {
 }
 
 .facebook {
-    background-color: #4267b2;
+    /* background-color: #4267b2;
     overflow: hidden;
     color: white;
-    border-radius: 25%;
+    border-radius: 25%; */
 }
 
 .facebook:hover {
@@ -54,13 +84,13 @@ h3, h4 {
 */
 
 @media (min-width: 320px) and (max-width: 767px) {
-    .social__mobile {
+    /* .social__mobile {
         display: block;
     }
 
     .social__desktop {
         display: none;
-    }
+    } */
     
 }
   

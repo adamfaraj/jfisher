@@ -10,14 +10,17 @@
     color: #fff;
 }
 
-.shows__details {
+.shows__list {
+    font-size: 2.5rem;
     width: 100%;
 }
 
-.shows__header, .shows__data-wrapper {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+.shows__header,
+.shows__details {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-gap: 50px;
+    text-align: right;
 }
 
 .shows__header span {
@@ -29,14 +32,17 @@
     flex-direction: column;
 }
 
-.shows__city {
-    text-align: right;
+@media (max-width: 768px) {
+    .shows__list {
+        font-size: 0.9rem;
+    }
 }
 
+/*
 @media (min-width: 768px) {
     .shows__wrapper {
         padding: 150px 40px;
-        /* background-position: right; */
+        background-position: right;
     }
     .shows__details {
         width: 80%;
@@ -65,3 +71,4 @@
         width: 90%;
     }
   }
+  */

@@ -1,54 +1,47 @@
 import React from 'react';
-import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import { Navbar, Nav, Container } from 'react-bootstrap';
 
 import './Navigation.css';
 
-class Navigation extends React.Component {
-    toHome = (e) => {
-        e.preventDefault();
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        })
-    }
+export default function Navigation() {
+  // const toHome = (e) => {
+  //     e.preventDefault();
+  //     window.scrollTo({
+  //         top: 0,
+  //         behavior: 'smooth'
+  //     })
+  // }
 
-    toSection(section) {
-        const sectionId = document.getElementById(section);
-        sectionId.scrollIntoView({behavior: 'smooth'})
-    }
+  const toSection = (section) => {
+      const sectionId = document.getElementById(section);
+      sectionId.scrollIntoView({behavior: 'smooth'})
+  }
 
-    render() {
-
-        return (
-            <Navbar inverse collapseOnSelect>
-                <Navbar.Header>
-                    <Navbar.Brand>
-                        <button href="" onClick={this.toHome}>Jourdain Fisher</button>
-                    </Navbar.Brand>
-                    <Navbar.Toggle />
-                </Navbar.Header>
-                <Navbar.Collapse>
-                    <Nav pullRight>
-                        <NavItem eventKey={1} href="" onClick={this.toSection.bind(this, 'about')}>
-                            About Jourdain
-                        </NavItem>
-                        <NavItem eventKey={2} href="" onClick={this.toSection.bind(this,'shows')}>
-                            Shows
-                        </NavItem>
-                        <NavItem eventKey={3} href="" onClick={this.toSection.bind(this,'videos')}>
-                            Videos
-                        </NavItem>
-                        <NavItem eventKey={4} href="" onClick={this.toSection.bind(this,'photos')}>
-                            Photos
-                        </NavItem>
-                        <NavItem eventKey={5} href="" onClick={this.toSection.bind(this,'contact')}>
-                            Contact
-                        </NavItem>
-                    </Nav>
-                </Navbar.Collapse>
-            </Navbar>
-        )
-    };
-}
-
-export default Navigation;
+  return (
+    <Navbar collapseOnSelect expand="lg" variant="dark" fixed="top">
+      <Container>
+        <Navbar.Brand>Jourdain Fisher</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav>
+            <Nav.Link className="text-white" eventKey={1} href="" onClick={toSection.bind(this, 'about')}>
+                About Jourdain
+            </Nav.Link>
+            <Nav.Link className="text-white" eventKey={2} href="" onClick={toSection.bind(this,'shows')}>
+                Shows
+            </Nav.Link>
+            <Nav.Link className="text-white" eventKey={3} href="" onClick={toSection.bind(this,'videos')}>
+                Videos
+            </Nav.Link>
+            <Nav.Link className="text-white" eventKey={4} href="" onClick={toSection.bind(this,'photos')}>
+                Photos
+            </Nav.Link>
+            <Nav.Link className="text-white" eventKey={5} href="" onClick={toSection.bind(this,'contact')}>
+                Contact
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  )
+};

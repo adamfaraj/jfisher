@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import Navigation from './components/Navigation/Navigation';
 import Home from './components/Home/Home';
 import About from './components/About/About';
+import Spotify from './components/Spotify/Spotify';
 import Shows from './components/Shows/Shows';
 import Videos from './components/Videos/Videos';
 import Photos from './components/Photos/Photos';
@@ -10,18 +11,13 @@ import Contact from './components/Contact/Contact';
 
 import './App.css';
 
-class App extends Component {
-  componentDidMount() {
-    console.log("Created by Adam Faraj");
-    console.log("Why are you looking at the console?");
-  }
-
-  render() {
+export default function App() {
     return (
         <div>
           <Navigation />
           <Home />
           <About />
+          <Spotify />
           <Shows />
           <Videos />
           <Photos />
@@ -29,6 +25,3 @@ class App extends Component {
         </div>
     );
   }
-}
-
-export default App;

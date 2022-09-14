@@ -23,9 +23,9 @@ export default function Contact() {
                     </div>
                     
                     <div>
-                        <h3>PA Agent: Adam Radler</h3>
+                        <h3>Touring Agent: Joanna Hynes</h3>
                         <h4>Gersh</h4>
-                        <p><a href="mailto:ARadler@gersh.com?cc=jourdainfisher@gmail.com" target="_blank" rel="noopener noreferrer">ARadler@gersh.com</a></p>
+                        <p><a href="mailto:jhynes@gersh.com?cc=jourdainfisher@gmail.com" target="_blank" rel="noopener noreferrer">jhynes@gersh.com</a></p>
                     </div>
                    
                    <div>

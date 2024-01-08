@@ -26,11 +26,11 @@ export default function Shows() {
                 <div className="gap-2 py-5 row justify-content-center">
                     {shows.map((show,i) => {
                         return (
-                            <Card className="col-4 col-lg-12" key={i}>
-                                <Card.Body className="d-flex row justify-content-around align-items-baseline">
-                                    <Card.Title className="date col-lg-3">{show[0]}</Card.Title>
-                                    <Card.Title className="city col-lg-3">{show[2]}</Card.Title>
-                                    <Card.Title className="venue col-lg-3">{show[1]}</Card.Title>
+                            <Card className="col-10 col-sm-5 col-md-12" key={i}>
+                                <Card.Body className="d-flex row justify-content-between align-items-baseline">
+                                    <Card.Title className="date col-md-3">{show[0]}</Card.Title>
+                                    <Card.Title className="city col-md-3">{show[2]}</Card.Title>
+                                    <Card.Title className="venue col-md-3">{show[1]}</Card.Title>
                                     <Button variant="dark" className="tickets col" onClick={() => buyTickets(show[3])}>
                                         <Card.Link href={show[3]} target='_blank'>Tickets</Card.Link>
                                     </Button>

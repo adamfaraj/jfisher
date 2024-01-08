@@ -8,23 +8,25 @@ import jf from '../../assets/images/IMG_3391.JPG';
 import './Shows.css';
 
 export default function Shows() {
-    const [shows, setShows] = useState([])
+    const [shows, setShows] = useState(null)
+
     useEffect(() => {
-        fetch("https://sheets.googleapis.com/v4/spreadsheets/1kNF0lD0eD-p_vAyYBIt5cK14OXpP6ALRz4w4LUfuYiw/values/Sheet1/?alt=json&key=AIzaSyDOmf2aRcIloaPx7qse34mRhN8Q9E7E7bE")
+        fetch('https://api.jourdainfisher.com/tour')
             .then(res => res.json())
-            .then(data => setShows(data.values))
+            .then(data => setShows(data))
     }, []);
 
     const buyTickets = (url) => {
         window.open(url, "_blank");
     }
 
-        return (
-            <div id="shows">
-                <h1 className="text-white text-center display-1">Tour</h1>
-                <Image src={jf} fluid />
-                <div className="gap-2 py-5 row justify-content-center">
-                    {shows.map((show,i) => {
+    return (
+        <div id="shows">
+            <h1 className="text-white text-center display-1">Tour</h1>
+            <Image src={jf} fluid />
+            <div className="gap-2 py-5 row justify-content-center">
+                {shows !== null ? (
+                    shows.map((show,i) => {
                         return (
                             <Card className="col-10 col-sm-5 col-md-12" key={i}>
                                 <Card.Body className="d-flex row justify-content-between align-items-baseline">
@@ -37,8 +39,11 @@ export default function Shows() {
                                 </Card.Body>
                             </Card>
                         );
-                    })}
-                </div>
+                    })
+                ) : (
+                    <h4 className='fst-italic text-center text-white'>No Upcoming Tours</h4>
+                )}
             </div>
-        )
-    };
+        </div>
+    );
+}

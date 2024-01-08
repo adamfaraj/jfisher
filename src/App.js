@@ -5,7 +5,6 @@ import Container from 'react-bootstrap/Container';
 import Navigation from './components/Navigation/Navigation';
 import Home from './components/Home/Home';
 import About from './components/About/About';
-import Spotify from './components/Spotify/Spotify';
 import Shows from './components/Shows/Shows';
 import Videos from './components/Videos/Videos';
 import Photos from './components/Photos/Photos';

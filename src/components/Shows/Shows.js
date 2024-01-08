@@ -1,81 +1,43 @@
 import React, { useEffect, useState } from 'react';
-// import gapi from 'gapi-client';
-// import { GoogleApis } from 'googleapis';
+import Image from 'react-bootstrap/Image';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+
+import jf from '../../assets/images/IMG_3391.JPG';
 
 import './Shows.css';
 
 export default function Shows() {
-    // constructor(props) {
-    //     super(props);
-    //     this.myRef = React.createRef();
-    // }
-
     const [shows, setShows] = useState([])
-
-    // const authenticate = () => {
-    //     return GoogleApis.auth2.getAuthInstance()
-    //         .signIn({scope: "https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/drive.readonly https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/spreadsheets.readonly"})
-    //         .then(function() { console.log("Sign-in successful"); },
-    //               function(err) { console.error("Error signing in", err); });
-    // }
-
-    // authenticate();
-    // fetch("https://spreadsheets.google.com/feeds/list/1kNF0lD0eD-p_vAyYBIt5cK14OXpP6ALRz4w4LUfuYiw/od6/public/values?alt=json")
-    // https://sheets.googleapis.com/v4/spreadsheets/{spreadsheetId}
-    // AIzaSyAm3ri8NAU3Qb6PceLTydLIY4j1ZQmmuhE
-    // https://sheets.googleapis.com/v4/spreadsheets/1kNF0lD0eD-p_vAyYBIt5cK14OXpP6ALRz4w4LUfuYiw/values/{sheetName}?alt=json&key=AIzaSyAm3ri8NAU3Qb6PceLTydLIY4j1ZQmmuhE
     useEffect(() => {
         fetch("https://sheets.googleapis.com/v4/spreadsheets/1kNF0lD0eD-p_vAyYBIt5cK14OXpP6ALRz4w4LUfuYiw/values/Sheet1/?alt=json&key=AIzaSyDOmf2aRcIloaPx7qse34mRhN8Q9E7E7bE")
             .then(res => res.json())
             .then(data => setShows(data.values))
     }, []);
-        // .then(res => res.body)
-        // .then(data => data.json())
-        // .then(data => console.log({data}))
-            // setShows(data.feed.entry)
 
-    // scrollToMyRef = () => {
-    //     window.scrollTo({
-    //         top:this.myRef.current.offsetTop, 
-    //         behavior: "smooth"
-    //     })
-    // }
-    // console.log(window)
-    // // console.log({ gapi })
-    // gapi.client.sheets.spreadsheets.values.get({
-    //     spreadsheetId: '1kNF0lD0eD-p_vAyYBIt5cK14OXpP6ALRz4w4LUfuYiw',
-    //     range: 'A1:C5'
-    //   }).then((response) => {
-    //     var result = response.result;
-    //     var numRows = result.values ? result.values.length : 0;
-    //     console.log(`${numRows} rows retrieved.`);
-    //   });
+    const buyTickets = (url) => {
+        window.open(url, "_blank");
+    }
 
         return (
-            <div
-                className="shows__wrapper"
-                id="shows"
-            >
-                <h1>Upcoming Shows</h1>
-                <div className="shows__list">
-                    <div className="shows__header">
-                        <span>Date</span>
-                        <span>Venue</span>
-                        <span>City</span>
-                    </div>
-                    <div>
-                        <div>
-                            {shows.map((show,i) => {
-                                return (
-                                    <div key={i} className="shows__details">
-                                        <span>{show[0]}</span>
-                                        <span>{show[1]}</span>
-                                        <span>{show[2]}</span>
-                                    </div>
-                                );
-                            })}
-                        </div>
-                    </div>
+            <div id="shows">
+                <h1 className="text-white text-center display-1">Tour</h1>
+                <Image src={jf} fluid />
+                <div className="gap-2 py-5 row justify-content-center">
+                    {shows.map((show,i) => {
+                        return (
+                            <Card className="col-4 col-lg-12" key={i}>
+                                <Card.Body className="d-flex row justify-content-around align-items-baseline">
+                                    <Card.Title className="date col-lg-3">{show[0]}</Card.Title>
+                                    <Card.Title className="city col-lg-3">{show[2]}</Card.Title>
+                                    <Card.Title className="venue col-lg-3">{show[1]}</Card.Title>
+                                    <Button variant="dark" className="tickets col" onClick={() => buyTickets(show[3])}>
+                                        <Card.Link href={show[3]} target='_blank'>Tickets</Card.Link>
+                                    </Button>
+                                </Card.Body>
+                            </Card>
+                        );
+                    })}
                 </div>
             </div>
         )

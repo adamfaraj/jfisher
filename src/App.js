@@ -1,4 +1,6 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
+
 
 import Navigation from './components/Navigation/Navigation';
 import Home from './components/Home/Home';
@@ -13,15 +15,14 @@ import './App.css';
 
 export default function App() {
     return (
-        <div>
+        <Container fluid>
           <Navigation />
           <Home />
           <About />
-          <Spotify />
           <Shows />
           <Videos />
           <Photos />
           <Contact />
-        </div>
+        </Container>
     );
   }

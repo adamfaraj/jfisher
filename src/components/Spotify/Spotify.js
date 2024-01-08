@@ -1,20 +1,39 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+import { FaSpotify } from "react-icons/fa6";
+
+
 import './Spotify.css';
 
 export default function Spotify() {
+  const [albums, setAlbums] = useState([]);
+
+  useEffect(() => {
+    fetch('https://api.jourdainfisher.com/albums')
+      .then(response => response.json())
+      .then(data => setAlbums(data));
+  }, []);
+
+  console.log({ albums });
+
+  const openSpotify = (url) => {
+    window.open(url, '_blank');
+  }
+
   return (
-      <div className="spotify-wrapper">
-        {/* <iframe
-            title='spotify'
-            className='spotify'
-            style={{borderRadius: "12px" }}
-            src="https://open.spotify.com/embed/album/09IvNAYF5h8e67Puvbcjhn?utm_source=generator"
-            width="30%"
-            height="380"
-            frameBorder="0"
-            allowfullscreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-        </iframe> */}
-      </div>
+      // <div className="spotify-wrapper">
+        albums.map(album => (
+            <Card style={{ width: '12rem' }}>
+              <Card.Img variant="top" src={album.images[0].url} />
+              <Card.Body className='d-flex justify-content-center'>
+                <Button variant="dark" className="text-center align-items-center btn btn-dark d-flex gap-2 text-center" onClick={() => openSpotify(album.external_urls.spotify)}>
+                  Listen Now
+                  <FaSpotify style={{ color: '#1cd760' }} />
+                  </Button>
+              </Card.Body>
+            </Card>
+        ))
+      // </div>
   )
 }

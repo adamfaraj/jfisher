@@ -1,16 +1,36 @@
 import React from 'react';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image';
+
 
 import './About.css';
 import logo from '../../assets/images/about.jpg';
 
 export default function About() {
         return (
-            <div className="about__wrapper" id="about">
-                <img src={logo} alt={logo} className=".img-responsive" />
-                <div className="about__text">
-                    <p>Jourdain Fisher has got it all. He is a hilarious comedian, writer, actor and has a beautiful singing voice in the shower. Since becoming a comedian at the age of 17, Jourdain has found enough success to keep from working at his family’s funeral home business and his star is only rising. He has written for Viceland, 50 Central on BET and most recently, The Tonight Show. Jourdain was highlighted as one of 2018’s New Faces at the prestigious Just For Laughs festival in Montreal, was a finalist in 2017’s Stand Up NBC in Los Angeles, has participated in Atlanta’s Laughing Skull Festival, was a finalist in North Carolina’s Funniest Competition and consistently headlines at clubs and colleges across the country. He has also performed on The Tonight Show and Comedy Central.
-                </p>
-                </div>
+            <div className='p-3 p-sm-0 text-white' id="about">
+                <h1 className='text-center display-1'>About</h1>
+                <Row className="align-items-center text-white">
+                    <Col lg={6}>
+                        <Image className="m-auto d-block" src={logo} alt={logo} fluid />
+                    </Col>
+                    <Col lg={6} className="about__text">
+                        <p className='lh-lg'>
+                            Jourdain Fisher has got it all. He is a hilarious comedian, writer, and actor. He has performed on
+                            COMEDY CENTRAL and in 2018 he made his late night TV debut on THE TONIGHT SHOW
+                            STARRING JIMMY FALLON where he received a standing ovation. In fact, his performance on
+                            The Tonight Show went so well that Jimmy hired him as a staff writer! He has also written for
+                            VICELAND, NETFLIX and BET. He was a highlight at the prestigious Just For Laughs festival in
+                            Montreal as a New Face and was a finalist at Stand Up NBC, held in Los Angeles. Jourdain has
+                            also performed at festivals Laugh Your Asheville Off, Laughing Skull, and Riot Comedy Fest.
+                            Jourdain has gained attention on social media platforms with numerous viral clips racking up
+                            millions of views on TikTok and Instagram. His debut Comedy Album “Good For You” can be
+                            found on all streaming platforms. When he is not touring he resides in New York City where he
+                            is a regular at The Comedy Cellar and Gotham Comedy Club.
+                        </p>
+                    </Col>
+                </Row>
             </div>
         )
 }

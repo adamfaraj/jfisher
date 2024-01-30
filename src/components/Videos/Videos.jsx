@@ -23,9 +23,9 @@ export default function Videos() {
         return (
             <div id="videos">
                 <h1 className="display-1 text-center text-white">Videos</h1>
-                {videos.map((video) => {
+                {videos.map((video, i) => {
                     return (
-                        <div className="videos__wrapper mt-3">
+                        <div key={i} className="videos__wrapper mt-3">
                             <div className="videos__video">
                                 <iframe title={video.title} width="100%" height="100%" src={video.url} allowFullScreen allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
                             </div>

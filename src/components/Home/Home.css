@@ -1,7 +1,8 @@
 .home__wrapper {
-    background-image: url("../../assets/images/jourdain-home.jpg");
+    background-image: url("../../assets/images/jourdain-new-home.jpg");
     background-size:cover;
-    background-position-x: 15%;
+    background-size: cover;
+    background-position: center;
     height: 100vh;
     margin-top: 61px;
 }

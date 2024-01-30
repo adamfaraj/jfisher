@@ -64,9 +64,9 @@ export default function Photos() {
                 </h1>
                 <div>
                     <Carousel showThumbs={false} dynamicHeight={true} infiniteLoop={true} autoPlay={true}>
-                        {photos.map((photo) => {
+                        {photos.map((photo, i) => {
                             return (
-                                <div>
+                                <div key={i}>
                                     <img src={photo.src} alt={photo.alt} />
                                 </div>
                             );

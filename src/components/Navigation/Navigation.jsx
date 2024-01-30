@@ -79,7 +79,7 @@ export default function Navigation() {
           <Nav className="me-auto">
               {navList.map((navItem, i) => {
                 return (
-                  <Nav.Link key={navItem.id} className="small text-nowrap" eventKey={i} href="" onClick={toSection.bind(this, navItem.id)}>
+                  <Nav.Link key={i} className="small text-nowrap" eventKey={i} href="" onClick={toSection.bind(this, navItem.id)}>
                     {navItem.name}
                   </Nav.Link>
                 );
@@ -88,11 +88,9 @@ export default function Navigation() {
           <Nav className='d-flex flex-row gap-3 navbar-nav'>
             {socialMedia.map((social, i) => {
               return (
-                <>
-                  <Nav.Link key={social.name} className="" href={social.url} target="_blank">
+                  <Nav.Link key={i} className="" href={social.url} target="_blank">
                     {social.icon}
                   </Nav.Link>
-                </>
               )
             })}
           </Nav>
